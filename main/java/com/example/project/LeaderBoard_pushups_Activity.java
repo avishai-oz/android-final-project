@@ -51,7 +51,7 @@ public class LeaderBoard_pushups_Activity extends AppCompatActivity {
                     personArrayList.add(user);
                 }
                 Collections.sort(personArrayList, new Comparator<person>() {
-                    @Override
+                    @Override   // compares the records of two players
                     public int compare(person lhs, person rhs) {
                         int answer = 0;
                         if (sport.equals("Push Ups"))
@@ -81,7 +81,7 @@ public class LeaderBoard_pushups_Activity extends AppCompatActivity {
         });
     }
 
-    public void refreshMyListView(){
+    public void refreshMyListView(){ // using the adapter to display the records
         if (sport.equals("Push Ups")) recordAdapter = new records_adapter(LeaderBoard_pushups_Activity.this,0,0,personArrayList,"push_ups");
         else if (sport.equals("Pull Ups")) recordAdapter = new records_adapter(LeaderBoard_pushups_Activity.this,0,0,personArrayList,"pull_ups");
         else if (sport.equals("Leg Lifts")) recordAdapter = new records_adapter(LeaderBoard_pushups_Activity.this,0,0,personArrayList,"leg_lifts");

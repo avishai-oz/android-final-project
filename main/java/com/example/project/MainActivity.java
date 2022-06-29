@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         q.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(!snapshot.exists()){
+                if(!snapshot.exists()){ // checks if the player exists already
                     LeaderNameAndRecord leaderNameAndRecord = new LeaderNameAndRecord();
                     myRef.child("leaders names:").child("push up leader").setValue(leaderNameAndRecord);
                     myRef.child("leaders names:").child("pull up leader").setValue(leaderNameAndRecord);

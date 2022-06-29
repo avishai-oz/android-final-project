@@ -150,7 +150,7 @@ public class YourRecordsActivity extends AppCompatActivity {
                     tv_push_up_record.setText(newValue);
                     MainActivity.using_this_phone.setPush_ups_record(Integer.valueOf(newValue));
                     myRef.child("users:").child(MainActivity.using_this_phone.getName()).setValue(MainActivity.using_this_phone);
-                    if (best_record_pushups<Integer.valueOf(newValue)){
+                    if (best_record_pushups<Integer.valueOf(newValue)){ // checks if the new record is better than the best
                         leaderNameAndRecord.setLeadingRecord(Integer.valueOf(newValue));
                         leaderNameAndRecord.setLeadingPersonName(MainActivity.using_this_phone.getName());
                         leaderNameAndRecord.setPreviousPersonName(name_person_best_pushup);
@@ -178,7 +178,7 @@ public class YourRecordsActivity extends AppCompatActivity {
                     tv_pull_up_record.setText(newValue);
                     MainActivity.using_this_phone.setPull_ups_record(Integer.valueOf(newValue));
                     myRef.child("users:").child(MainActivity.using_this_phone.getName()).setValue(MainActivity.using_this_phone);
-                    if (best_record_pullups<Integer.valueOf(newValue)){
+                    if (best_record_pullups<Integer.valueOf(newValue)){ // checks if the new record is better than the best
                         leaderNameAndRecord.setLeadingRecord(Integer.valueOf(newValue));
                         leaderNameAndRecord.setLeadingPersonName(MainActivity.using_this_phone.getName());
                         leaderNameAndRecord.setPreviousPersonName(name_person_best_pullup);
@@ -205,7 +205,7 @@ public class YourRecordsActivity extends AppCompatActivity {
                     tv_leg_lifts_record.setText(newValue);
                     MainActivity.using_this_phone.setLeg_lifts_record(Integer.valueOf(newValue));
                     myRef.child("users:").child(MainActivity.using_this_phone.getName()).setValue(MainActivity.using_this_phone);
-                    if (best_record_leg_lifts<Integer.valueOf(newValue)){
+                    if (best_record_leg_lifts<Integer.valueOf(newValue)){ // checks if the new record is better than the best
                         leaderNameAndRecord.setLeadingRecord(Integer.valueOf(newValue));
                         leaderNameAndRecord.setLeadingPersonName(MainActivity.using_this_phone.getName());
                         leaderNameAndRecord.setPreviousPersonName(name_person_best_leg_lifts);
@@ -233,7 +233,7 @@ public class YourRecordsActivity extends AppCompatActivity {
                     tv_parallels_record.setText(newValue);
                     MainActivity.using_this_phone.setParallels_record(Integer.valueOf(newValue));
                     myRef.child("users:").child(MainActivity.using_this_phone.getName()).setValue(MainActivity.using_this_phone);
-                    if (best_record_parallels<Integer.valueOf(newValue)){
+                    if (best_record_parallels<Integer.valueOf(newValue)){ // checks if the new record is better than the best
                         leaderNameAndRecord.setLeadingRecord(Integer.valueOf(newValue));
                         leaderNameAndRecord.setLeadingPersonName(MainActivity.using_this_phone.getName());
                         leaderNameAndRecord.setPreviousPersonName(name_person_best_parallels);
@@ -260,7 +260,7 @@ public class YourRecordsActivity extends AppCompatActivity {
                     tv_crunches_record.setText(newValue);
                     MainActivity.using_this_phone.setCrunches_record(Integer.valueOf(newValue));
                     myRef.child("users:").child(MainActivity.using_this_phone.getName()).setValue(MainActivity.using_this_phone);
-                    if (best_record_crunches<Integer.valueOf(newValue)){
+                    if (best_record_crunches<Integer.valueOf(newValue)){ // checks if the new record is better than the best
                         leaderNameAndRecord.setLeadingRecord(Integer.valueOf(newValue));
                         leaderNameAndRecord.setLeadingPersonName(MainActivity.using_this_phone.getName());
                         leaderNameAndRecord.setPreviousPersonName(name_person_best_crunches);

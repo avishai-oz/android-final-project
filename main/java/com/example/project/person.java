@@ -50,7 +50,7 @@ public class person {
     public int getCrunches_record() {
         return crunches_record;
     }
-
+                                                                //seters
     public void setName(String name) {
         this.name = name;
     }

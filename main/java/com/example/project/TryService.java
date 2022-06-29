@@ -71,7 +71,8 @@ public class TryService extends Service {
                 for (DataSnapshot dst : dataSnapshot.getChildren()) {
                     String sportNameKey = dst.getKey();
                     LeaderNameAndRecord leaderNameAndRecord = dst.getValue(LeaderNameAndRecord.class);
-                    if(MainActivity.using_this_phone!=null && MainActivity.using_this_phone.getName().equals(leaderNameAndRecord.getPreviousPersonName())&& !MainActivity.using_this_phone.getName().equals(leaderNameAndRecord.getLeadingPersonName())){
+                    if(MainActivity.using_this_phone!=null && MainActivity.using_this_phone.getName().equals(leaderNameAndRecord.getPreviousPersonName())&&
+                       !MainActivity.using_this_phone.getName().equals(leaderNameAndRecord.getLeadingPersonName())){ // checks if the user isn't first now, but was previously
                         leaderNameAndRecord.setPreviousPersonName("Person already got notification");
                         myRef.child("leaders names:").child(dst.getKey()).setValue(leaderNameAndRecord);
                         notifyRightNow();
