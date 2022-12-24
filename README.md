@@ -1,7 +1,7 @@
 # Android-Final-Project
 **Avishai Oz**
 
-## Abute the project.
+## Abute the project:
 פרוייקט זה הוא פרוייקט שנעשה במסגרת מגמת הנדסת תוכנה בבית ספר.
 
 בפרוייקט התבקשנו להכין אפליקציית mobail הכתובה בjava בעזרת IDE-android stodio.
